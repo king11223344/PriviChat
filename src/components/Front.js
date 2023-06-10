@@ -11,7 +11,7 @@ const App = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
   const [link, setLink] = useState("");
-  const generateRandomCharacter = (length) => {
+  const generateRandomCharacter = (length) => {// generate a chat room code
     let result = "";
     const characters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -90,7 +90,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="header">WhatsApp-like Styling</div>
+      <div className="header">PriviChat</div>
       <div className="content">
         {/* <div className="random-character-box">{randomCharacter}</div> */}
         <input
