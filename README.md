@@ -43,13 +43,21 @@ git clone https://github.com/king11223344/privichat.git
 2. Retrieve your Firebase project ID.
 3. Enable Google Sign-In authentication in the Firebase Authentication section.
 4. Update the .env file with the required Firebase configuration variables.
+   
 REACT_APP_FIREBASE_API_KEY: Your Firebase API key.
+
 REACT_APP_FIREBASE_AUTH_DOMAIN: Your Firebase authentication domain.
+
 REACT_APP_FIREBASE_DATABASE_URL: Your Firebase Realtime Database URL.
+
 REACT_APP_FIREBASE_PROJECT_ID: Your Firebase project ID.
+
 REACT_APP_FIREBASE_STORAGE_BUCKET: Your Firebase storage bucket.
+
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID: Your Firebase messaging sender ID.
+
 REACT_APP_FIREBASE_APP_ID: Your Firebase app ID.
+
 
 ## Usage 
 
@@ -65,4 +73,4 @@ REACT_APP_FIREBASE_APP_ID: Your Firebase app ID.
 PriviChat takes security seriously and ensures the privacy and confidentiality of conversations. All messages are encrypted before being stored in the Firebase Realtime Database. This encryption prevents any unauthorized access to the contents of the messages.
 
 ## Contributing
-Contributions to PriviChat are welcome and encouraged! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/king11223344/
+Contributions to PriviChat are welcome and encouraged! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/king11223344/)
