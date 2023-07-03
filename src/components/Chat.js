@@ -1,11 +1,11 @@
-import { Avatar, IconButton } from "@material-ui/core";
+import { Avatar, IconButton } from "@mui/material";
 import {
   AttachFile,
   InsertEmoticon,
   Mic,
   MoreVert,
   SearchOutlined,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";

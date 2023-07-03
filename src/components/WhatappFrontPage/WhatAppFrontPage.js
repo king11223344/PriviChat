@@ -28,6 +28,9 @@ const WhatAppFrontPage = () => {
   }, []);
   console.log(data);
   const signIn = () => {
+    setTimeout(() => {
+      console.log("hello");
+    }, 1000);
     auth
       .signInWithPopup(provider)
       .then((result) => {
@@ -37,7 +40,7 @@ const WhatAppFrontPage = () => {
             user: result.user,
           });
         } else {
-          alert(result.user.email + " is not authorised user of this chatroom")
+          alert(result.user.email + " is not authorised user of this chatroom");
         }
       })
       .catch((error) => alert(error.message));
@@ -49,12 +52,12 @@ const WhatAppFrontPage = () => {
         <div className="whatsapp_logo part_nav">
           <a to="/">
             <img src={pic3} alt="whatsapp_logo" width="40px" height="40px" />
-            <span>WhatsApp clone</span>
+            <span>PriviChat</span>
           </a>
         </div>
         <ul className="nav_options part_nav">
           <li>
-            <a href="https://web.whatsapp.com/">WHATSAPP WEB</a>
+            <a href="https://web.whatsapp.com/">PriviChat WEB</a>
           </li>
           <li>
             <a href="https://www.whatsapp.com/features">FEATURES</a>
@@ -100,7 +103,7 @@ const WhatAppFrontPage = () => {
             <i className="fas fa-bars"></i>
             <ul>
               <a href="https://web.whatsapp.com/">
-                <li>WHATSAPP WEB</li>
+                <li>PriviChat WEB</li>
               </a>
               <a href="https://www.whatsapp.com/features">
                 <li>FEATURES</li>
@@ -132,7 +135,7 @@ const WhatAppFrontPage = () => {
                 height="70px"
               />
             </a>{" "}
-            <br /> WhatsApp Clone
+            <br /> PriviChat
           </p>
         </div>
       </nav>
@@ -146,7 +149,7 @@ const WhatAppFrontPage = () => {
               Reliable messaging.
             </h2>
             <p>
-              With WhatsApp, you'll get fast, simple, secure messaging and
+              With WhatsAp, you'll get fast, simple, secure messaging and
               calling for free*, available on phones all over the world.
               <br />
               <br />
@@ -179,13 +182,13 @@ const WhatAppFrontPage = () => {
         </div>
         <div className="lower_content">
           <div className="lower_first">
-            <h2>WhatsApp Business App</h2>
+            <h2>Privichat Business App</h2>
             <p>
               <a
                 href="https://www.whatsapp.com/business"
                 className="marked_business"
               >
-                WhatsApp Business
+                PriviChat Business
               </a>{" "}
               is a free to download app that was built with the small business
               owner in mind. Create a catalog to showcase your products and
@@ -194,14 +197,14 @@ const WhatAppFrontPage = () => {
               <br />
               <br />
               <br />
-              WhatsApp can also help medium and large businesses provide
+              PriviChat can also help medium and large businesses provide
               customer support and deliver important notifications to customers.
               <a
                 href="https://www.whatsapp.com/business/api"
                 className="marked_business"
               >
                 {" "}
-                Learn more about WhatsApp Business API.
+                Learn more about PriviChat Business API.
               </a>
               .
             </p>
@@ -218,11 +221,11 @@ const WhatAppFrontPage = () => {
             <p>END-TO-END ENCRYPTION</p>
             <h2>Security By Default</h2>
             <p>
-              Some of your most personal moments are shared on WhatsApp, which
+              Some of your most personal moments are shared on PriviChat, which
               is why we built end-to-end encryption into the latest versions of
               our app. When end-to-end encrypted, your messages and calls are
               secured so only you and the person you're communicating with can
-              read or listen to them, and nobody in between, not even WhatsApp.
+              read or listen to them, and nobody in between, not even PriviChat.
             </p>
           </div>
         </div>
@@ -245,7 +248,7 @@ const WhatAppFrontPage = () => {
               <a href="https://www.whatsapp.com/download">Download</a>
             </li>
             <li>
-              <a href="https://web.whatsapp.com/">WhatsApp Web</a>
+              <a href="https://web.whatsapp.com/">PriviChat Web</a>
             </li>
             <li>
               <a href="https://www.whatsapp.com/business">Business</a>
@@ -299,7 +302,7 @@ const WhatAppFrontPage = () => {
           </ul>
         </div>
         <div className="bottom_line">
-          <p>2022 @CopyRight; My Inc</p>
+          <p>2023 @CopyRight; My Inc</p>
           <p>
             <a href="https://www.whatsapp.com/legal/"> Privacy & Terms</a>
           </p>

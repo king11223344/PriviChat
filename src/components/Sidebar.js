@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Avatar, IconButton } from "@material-ui/core";
-import { Chat, DonutLarge, MoreVert, SearchOutlined } from "@material-ui/icons";
+import { Avatar, IconButton } from "@mui/material";
+import { Chat, DonutLarge, MoreVert, SearchOutlined } from "@mui/icons-material";
 import SidebarChat from "./SidebarChat";
 import db from "../firebase";
 import { useStateValue } from "../api/StateProvider";
@@ -22,14 +22,7 @@ function Sidebar() {
         }))
       )
     );
-    // const userRoom = db.collection("aaddaa").onSnapshot((snapshot) =>
-    //   setTemp(
-    //     snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       data: doc.data(),
-    //     }))
-    //   )
-    // );
+
     return () => {
       unsubscribe();
       // userRoom();

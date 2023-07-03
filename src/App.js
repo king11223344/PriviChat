@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Chat from "./components/Chat";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Login from "./components/Login";
 import Front from "./components/Front";
 import { useStateValue } from "./api/StateProvider";
@@ -11,27 +11,46 @@ function App() {
 
   return (
     <Router>
-      <Route path="/" exact>
-        <Front />
-      </Route>
-      <Route path="/rooms">
-        <AppContainer>
-          {!user ? (
-            <>
-              <WhatAppFrontPage />
-            </>
-          ) : (
-            <AppBody>
-              <Sidebar />
-              <Switch>
-                <Route path="/rooms/:roomId">
+      <Routes>
+        <Route path="/" element={<Front />} />
+        <Route
+          path="/rooms"
+          element={
+            <AppContainer>
+              {!user ? (
+                <>
+                  <WhatAppFrontPage />
+                </>
+              ) : (
+                <AppBody>
+                  <Sidebar />
+                  {/* <Chat /> */}
+                  <Routes>
+                    <Route path="/rooms/:roomId" render={() => <Chat />} />
+                  </Routes>
+                </AppBody>
+              )}
+            </AppContainer>
+          }
+        />
+        <Route
+          path="/rooms/:roomId"
+          element={
+            <AppContainer>
+              {!user ? (
+                <>
+                  <WhatAppFrontPage />
+                </>
+              ) : (
+                <AppBody>
+                  <Sidebar />
                   <Chat />
-                </Route>
-              </Switch>
-            </AppBody>
-          )}
-        </AppContainer>
-      </Route>
+                </AppBody>
+              )}
+            </AppContainer>
+          }
+        />
+      </Routes>
     </Router>
   );
 }
